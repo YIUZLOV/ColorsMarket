@@ -1,0 +1,60 @@
+@use '../helpers' as *;
+
+.products {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+  'filters settings'
+  'filters cards';
+  column-gap: rem(150);
+  padding-block: rem(72) rem(147);
+
+  @include tablet {
+    column-gap: rem(100);
+  }
+
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding-block: rem(48) rem(68);
+  }
+
+  &__filter {
+    grid-area: filters;
+    padding-block-start: rem(17);
+  }
+
+  &__settings {
+    grid-area: settings;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    font-size: rem(12);
+    text-transform: uppercase;
+  }
+
+  &__quantity {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__filter__button {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+
+    @include mobile-above {
+      display: none;
+    }
+  }
+  
+  &__cards {
+    grid-area: cards;
+  }
+
+  
+}

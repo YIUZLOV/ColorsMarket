@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+  <title>ColorsMarket | Home</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+  <header class="header " data-js-header>
+      <div class="header__body">
+          <div class="header__body-inner container">
+            <a 
+              href="/" 
+              class="header__logo logo"
+              title="Home"
+              aria-label="Home"
+            >
+              <img 
+                src="./images/logo.svg" 
+                alt="Логотип сайта" 
+                class="logo__image"
+                width="179"
+                height="50"
+              >
+            </a>
+            <div class="header__overlay" data-js-header-overlay>
+              <nav class="header__menu">
+                <ul class="header__menu-list">
+                  <li class="header__menu-item">
+                    <a href="/" class="header__menu-link is-active">Продукты</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Цвета</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Вдохновение</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Советы</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="/" class="header__menu-link">Найти магазин</a>
+                  </li>
+                </ul>
+              </nav>
+              </div>
+              <button 
+                  class="header__burger-button burger-button visible-tablet"
+                  type="button"
+                  aria-label="Open menu"
+                  title="Open menu"
+                  data-js-header-burger-button
+                >
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__line"></span>
+              </button>
+              <a class="header__call" href="/">
+                <p class="header__call-number">+7 (495) 221-77-69</p>
+                <p class="header__call-action">Заказать звонок</p>
+              </a>
+              <div class="header__actions">
+                <ul class="header__actions-list">
+                  <li class="header__actions-item hidden-mobile">
+                    <a href="/" class="header__actions-link">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#1F2020" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 17.5L13.875 13.875" stroke="#1F2020" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header__actions-item hidden-mobile">
+                    <a href="/" class="header__actions-link">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8_30)"><circle cx="11" cy="23" r="8.4" stroke="black" stroke-width="1.2"/><circle cx="11" cy="7" r="3.4" stroke="black" stroke-width="1.2"/></g><defs><clipPath id="clip0_8_30"><rect width="22" height="22" fill="white"/></clipPath></defs>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header__actions-item hidden-mobile">
+                    <a href="/" class="header__actions-link">
+                      <svg width="24" height="24" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0009 19C10.745 19.0001 10.4978 18.9074 10.3052 18.739C9.57966 18.1047 8.87674 17.5067 8.25817 16.9802C6.65691 15.7048 5.16127 14.3023 3.78581 12.7865C2.67695 11.5918 2.0423 10.0341 2.00085 8.4053C1.97621 6.99164 2.48598 5.62067 3.42845 4.56595C3.88583 4.0681 4.44256 3.67154 5.06275 3.40184C5.68294 3.13214 6.35283 2.9953 7.0292 3.00012C8.05552 2.99541 9.053 3.3392 9.8581 3.97514C10.2942 4.31625 10.6791 4.71815 11.0009 5.16854C11.3231 4.71841 11.7082 4.31682 12.1446 3.97605C12.9489 3.34036 13.9453 2.99628 14.9708 3.00012C15.6472 2.9953 16.3171 3.13214 16.9372 3.40184C17.5574 3.67154 18.1142 4.0681 18.5715 4.56595C19.514 5.62067 20.0238 6.99164 19.9991 8.4053C19.9585 10.0337 19.3249 11.5915 18.2169 12.7865C16.8425 14.3013 15.3481 15.7028 13.7482 16.9775C13.1287 17.5049 12.4267 18.1029 11.6975 18.7399C11.5045 18.9081 11.257 19.0005 11.0009 19V19Z" stroke="black" stroke-width="1.2"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header__actions-item basket__button-header">
+                    <button class="header__actions-link" data-js-basket-button-open>0</button>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+  </header>
+  <main>
+    <section class="hero">
+      <ul class="hero__route">
+        <li class="hero__route__item">
+          Главная
+          <span class="hero__route__circle"></span>
+        </li>
+        <li class="hero__route__item">
+          Продукты
+          <span class="hero__route__circle"></span>
+        </li>
+        <li class="hero__route__item">Краски</li>
+      </ul>
+      <div class="hero__content">
+          <h1 class="hero__title">Краски</h1>
+          <p class="hero__subtitle h3">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</p>
+        </div>
+      <div class="hero__slider slider" data-js-slider>
+        <ul class="slider__list" data-js-slider-list>
+        </ul>
+        <div class="slider__controls">
+          <button
+            class="slider__button slider__button--left is-lock"
+            type="button"
+            aria-label="Slider left"
+            title="Slider left"
+            data-js-slider-button-left
+          >
+            <span class="slider__button__line"></span>
+            <span class="slider__button__line"></span>
+          </button>
+          <button 
+            class="slider__button slider__button--right"
+            type="button"
+            aria-label="Slider right"
+            title="Slider right"
+            data-js-slider-button-right
+          >
+            <span class="slider__button__line"></span>
+            <span class="slider__button__line"></span>
+          </button>
+        </div>
+        <div class="slider__scrollbar" data-js-slider-scrollbar>
+        </div>
+      </div>
+    </section>
+    <section class="container products">
+      <div class=" products__filter filter" data-js-filter>
+        <div class="filter__wrapper" data-js-filter-wrapper>
+          <ul class="filter__list" data-js-filter-list>
+            <li class="filter__item" data-js-filter-item>
+              <label class="filter__label">
+                <input 
+                  type="radio" 
+                  name="filter" 
+                  value="new"
+                  class="filter__radio"
+                  checked
+                >
+                <span class="filter__switch"></span>
+                <span class="filter__caption">Новинки</span>
+              </label>
+            </li>
+            <li class="filter__item" data-js-filter-item>
+              <label class="filter__label">
+                <input 
+                  type="radio" 
+                  name="filter" 
+                  value="availability"
+                  class="filter__radio"
+                >
+                <span class="filter__switch"></span>
+                <span class="filter__caption">Есть в наличии</span>
+              </label>
+            </li>
+            <li class="filter__item" data-js-filter-item>
+              <label class="filter__label">
+                <input 
+                  type="radio" 
+                  name="filter" 
+                  value="contract"
+                  class="filter__radio"
+                >
+                <span class="filter__switch"></span>
+                <span class="filter__caption">Контрактные</span>
+              </label>
+            </li>
+            <li class="filter__item" data-js-filter-item>
+              <label class="filter__label">
+                <input 
+                  type="radio" 
+                  name="filter" 
+                  value="exclusive"
+                  class="filter__radio"
+                >
+                <span class="filter__switch"></span>
+                <span class="filter__caption">Эксклюзивные</span>
+              </label>
+            </li>
+            <li class="filter__item" data-js-filter-item>
+              <label class="filter__label">
+                <input 
+                  type="radio" 
+                  name="filter" 
+                  value="sale"
+                  class="filter__radio"
+                >
+                <span class="filter__switch"></span>
+                <span class="filter__caption">Распродажа</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter__overlay" data-js-filter-overlay></div>
+      </div>
+      <div class="products__settings">
+        <p class="products__quantity" data-js-cards-quantity-all>Загрузка...</p>
+        <button class="products__filter__button" data-js-filter-button>Фильтры</button>
+        <div class="products__select">
+          <div class="select" data-js-select>
+            <button 
+              class="select__header" 
+              aria-haspopup="listbox" 
+              aria-expanded="false"
+              data-js-select-header
+            >
+              <span 
+                class="select__value" 
+                data-js-select-header-value
+              >
+                Сначала дорогие
+              </span>
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4.5L7.4641 0L0.535898 0L4 4.5Z" fill="#202020"/>
+              </svg>
+            </button>
+            
+            <div 
+              class="select__dropdown" 
+              role="listbox"
+              data-js-select-dropdown
+            >
+              <div 
+                class="select__option" 
+                role="option" 
+                data-value="max-price" 
+                aria-selected="true"
+                data-js-select-option
+              >
+                Сначала дорогие
+              </div>
+              <div 
+                class="select__option" 
+                role="option" 
+                data-value="min-price"
+                data-js-select-option
+              >
+                Сначала недорогие
+              </div>
+              <div 
+                class="select__option" 
+                role="option" 
+                data-value="popular"
+                data-js-select-option
+              >
+                Сначала популярные
+              </div>
+              <div 
+                class="select__option" 
+                role="option" 
+                data-value="date"
+                data-js-select-option
+              >
+                Сначала новые
+              </div>
+            </div>
+            <div class="select__overlay" data-js-select-overlay></div>
+          </div>
+        </div>
+      </div>
+      <div class="products__cards cards" data-js-cards>
+        <ul class="cards__list" data-js-cards-list>
+        </ul>
+      </div>
+    </section>
+    <section class="basket" data-js-basket>
+      <div class="basket__wrapper" data-js-basket-wrapper>
+        <div class="basket__header">
+          <h2 class="basket__title">Корзина</h2>
+          <button class="basket__button-close" data-js-basket-button-close>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18" stroke="#1F2020" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 6L18 18" stroke="#1F2020" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="basket__content">
+          <div class="basket__caption">
+            <p class="basket__quantity" data-js-basket-quantity-all></p>
+            <button class="basket__button-clear" data-js-basket-button-clear>очистить список</button>
+          </div>
+          <ul class="basket__list" data-js-basket-list>
+          </ul>
+        </div>
+        <div class="basket__order">
+          <div class="basket__order__price">
+            <p>Итого</p>
+            <p class="basket__order__sum" data-js-basket-total-price></p>
+          </div>
+          <button class="basket__button-order" data-js-basket-button-oreder>Оформить заказ</button>
+        </div>
+      </div>
+      <div class="basket__overlay" data-js-basket-overlay></div>
+    </section>
+  </main>
+  <footer class="footer">
+    
+  </footer>
+
+  <template id="template__card">
+    <li class="cards__item" data-js-cards-item>
+      <img class="cards__image" src="" alt="" loading="lazy" data-js-cards-image>
+      <div class="cards_content">
+        <p class="cards__name" data-js-cards-name></p>
+        <p class="cards__article" data-js-cards-article></p>
+      </div>
+      <div class="cards__order">
+        <p class="cards__price" data-js-cards-price></p>
+        <button class="cards__button" data-js-cards-button>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </li>
+  </template>
+  <template id="template__card-basket">
+    <li class="basket__item" data-js-basket-item>
+      <img src="" alt="" data-js-basket-image>
+      <div class="basket__item__description">
+        <p class="basket__item__title" data-js-basket-title></p>
+        <p class="basket__item__price" data-js-basket-price></p>
+      </div>
+      <div class="basket__item__count">
+        <button class="basket__button-decrement" data-js-basket-button-decrement>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.3335 8H12.6668" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <p class="basket__item__quantity" data-js-basket-quantity>1</p>
+        <button class="basket__button-increment" data-js-basket-button-increment>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 4.16663V15.8333" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.16699 10H15.8337" stroke="#1F2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <button class="basket__button-delete" data-js-basket-button-delete>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18" stroke="#1F2020" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 6L18 18" stroke="#1F2020" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </button>
+      <button class="basket__button-repeat" data-js-basket-repeat>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 1L21 5L17 9" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 11V9C3 7.93913 3.42143 6.92172 4.17157 6.17157C4.92172 5.42143 5.93913 5 7 5H21" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 23L3 19L7 15" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 13V15C21 16.0609 20.5786 17.0783 19.8284 17.8284C19.0783 18.5786 18.0609 19 17 19H3" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </li>
+  </template>
+</body>
+</html>

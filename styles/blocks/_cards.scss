@@ -1,0 +1,100 @@
+@use '../helpers' as *;
+
+.cards {
+  width: 100%;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: rem(16) rem(24);
+    flex-wrap: wrap;
+
+    @include tablet {
+      justify-content: space-around;
+      gap: rem(24) rem(15);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: rem(16);
+    padding-bottom: rem(16);
+    // border-bottom: var(--border);
+
+    @include tablet-above {
+      &:hover {
+      & .cards__button {
+        opacity: 1;
+      }
+    }
+    }
+
+    @include tablet {
+      width: rem(180);
+    }
+
+    @include mobile-s {
+      width: rem(130);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    min-width: rem(112);
+    height: 100%;
+    padding: rem(39);
+
+    @include tablet {
+      padding: rem(21);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    line-height: 112%;
+    text-wrap: balance;
+  }
+
+  &__order {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+
+  &__price {
+    font-size: rem(16);
+  }
+
+  &__button {
+    background: var(--color-gray-button);
+    border: none;
+    border-radius: rem(8);
+    padding: rem(6) rem(30);
+    font-size: rem(20);
+    line-height: 100%;
+    color: var(--color-dark);
+    
+    @include tablet-above {
+      opacity: 0;
+    }
+
+    @include mobile {
+      padding: rem(4) rem(12);
+    }
+
+    &:hover {
+      background: var(--color-green);
+    }
+    
+    
+  }
+}

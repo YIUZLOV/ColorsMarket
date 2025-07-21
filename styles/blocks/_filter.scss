@@ -1,0 +1,118 @@
+@use '../helpers' as *;
+
+.filter {
+  position: relative;
+  
+  &__wrapper {
+    @include mobile-above {
+      display: contents;
+    }
+
+    @include mobile {
+      position: fixed;
+      display: block;
+      bottom: -100vh;
+      overflow: hidden;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 60vh;
+      background-color: var(--color-light);
+      border-radius: rem(24) rem(24) 0 0;
+      transform: translateY(0%);
+      transition-duration: 0.5s;
+    }
+
+    &.is-active {
+      @include mobile {
+        padding: rem(54) rem(24);
+        height: 60vh;
+        z-index: 100;
+        opacity: 1;
+        bottom: 0;
+
+        & + .filter__overlay {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: rem(12);
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  &__radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:focus-visible + .filter__switch {
+      box-shadow: 0 0 0 2px var(--color-green);
+    }
+  }
+
+  &__switch {
+    position: relative;
+    width: rem(36);
+    height: rem(22);
+    background: var(--color-gray-button);
+    border-radius: rem(40);
+    transition: background 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: rem(6);
+      top: rem(7);
+      width: rem(8);
+      height: rem(8);
+      background: var(--color-dark);
+      border-radius: 50%;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  &__radio:checked + &__switch {
+    background: var(--color-green);
+    
+    &::before {
+      transform: translateX(rem(15));
+    }
+  }
+
+  &__caption {
+    text-transform: uppercase;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 99;
+  }
+
+  
+
+}

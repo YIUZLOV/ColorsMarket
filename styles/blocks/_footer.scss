@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.footer {
+  width: 100%;
+  height: rem(312);
+  background-color: var(--color-dark);
+
+  @include tablet {
+    height: rem(204);
+  }
+}

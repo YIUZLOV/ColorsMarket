@@ -1,0 +1,105 @@
+@use 'helpers' as *;
+
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(18, 14);
+
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  letter-spacing: -0.03em;
+  color: var(--color-gray-50);
+  background-color: var(--color-light);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--color-light);
+}
+
+
+
+h1, .h1 {
+  @include fluid-text(72, 36);
+
+  font-weight: 400;
+  line-height: 88%;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 { 
+  @include fluid-text(40, 30);
+
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 88%;
+  letter-spacing: -0.04em;
+}
+
+h3, .h3 {
+  @include fluid-text(20, 16);
+
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+h4, .h4 {
+  @include fluid-text(18, 14);
+}
+
+h5, .h5 {
+  @include fluid-text(24, 18);
+}
+
+h6, .h6 {
+  @include fluid-text(20, 16);
+}
+
+a,
+button,
+label,
+input,
+select,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-gray);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) solid var(--color-green);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}

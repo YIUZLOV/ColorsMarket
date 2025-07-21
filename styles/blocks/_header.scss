@@ -1,0 +1,140 @@
+@use '../helpers' as *;
+
+.header {
+  &__body {
+    padding: rem(40) 0;
+    background-color: var(--color-light);
+
+
+    @include mobile {
+      padding: rem(20) 0;
+    }
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include laptop {
+        display: grid;
+        grid-template-areas: 
+        'logo menu call'
+        'logo menu actions';
+        row-gap: rem(10);
+      }
+
+      @include tablet {
+        grid-template-areas: 
+        'burger logo actions';
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__overlay {
+    z-index: 5;
+    @include tablet-above {
+      display: contents;
+    }
+
+    @include tablet {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 3rem;
+      padding: 1rem;
+      background-color: var(--color-light);
+      transition-duration: var(--transition-duration);
+
+      &:not(.is-active) {
+        @include hide;
+
+        translate: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    @include mobile {
+      overflow-y: auto;
+    }
+
+    grid-area: menu;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: rem(24);
+
+      @include laptop {
+        column-gap: rem(24);
+      }
+
+      @include tablet {
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+    }
+
+    &-link {
+      color: var(--color-dark);
+
+      &.is-active {
+        color: var(--color-green);
+        font-weight: 600;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__burger-button {
+    z-index: 6;
+    grid-area: burger;
+  }
+
+  &__call {
+    display: flex;
+    flex-direction: column;
+    gap: rem(2);
+    justify-content: center;
+    line-height: 100%;
+    grid-area: call;
+
+    @include tablet {
+      display: none;
+    }
+
+    &-number {
+      font-weight: 600;
+    }
+
+    &-action {
+      color: var(--color-gray);
+    }
+  }
+  
+  &__actions {
+    grid-area: actions;
+    &-list {
+      display: flex;
+      flex-direction: row;
+      gap: rem(24);
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+  }
+  
+}

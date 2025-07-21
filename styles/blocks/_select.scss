@@ -1,0 +1,86 @@
+@use '../helpers' as *;
+
+.select {
+  position: relative;
+  width: rem(280);
+
+  @include mobile-s {
+    width: rem(180);
+  }
+
+  &__header {
+    position: relative;
+    width: 100%;
+    padding: rem(17) 0 rem(17) rem(24);
+    display: flex;
+    flex-direction: row;
+    gap: rem(4);
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    
+    &:hover {
+      background: var(--color-green);
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--color-light);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    z-index: 100;
+    top: 0;
+  }
+
+  &__option {
+    padding: rem(17) 0 rem(17) rem(24);
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.06em;
+    
+    
+    &:hover, 
+    &:focus {
+      background: var(--color-gray-button);
+    }
+    
+    &[aria-selected="true"] {
+      background:  var(--color-green);
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 99;
+  }
+
+  &.is-active {
+    .select__dropdown {
+      max-height: rem(400);
+      opacity: 1;
+    }
+    
+    .select__overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+}
